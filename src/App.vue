@@ -1,13 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <Home></Home>
 </template>
 
+<script>
+import "@/assets/styles/reset.styl";
+import Home from './pages/Home'
+export default {
+  data() {
+    return {
+      greeting:  'hello'
+    }
+  },
+  methods: {
+    handleClick () {
+      console.log(0)
+    }
+  },
+  components: {
+    Home
+  }
+}
+</script>
 <style lang="stylus">
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
