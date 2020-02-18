@@ -18,6 +18,13 @@ export default {
   },
   components: {
     Home
+  },
+  mounted(){
+    console.log(document.cookie)
+    this.$api.videoList({
+      token: '',
+      optimus_uuid:`5D1120804B2811EA92605DB2841D28113B80F0F300CC45BFBEF63CBBCCE98E92`
+    }).then(res=>console.log(res))
   }
 }
 </script>

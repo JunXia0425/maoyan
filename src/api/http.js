@@ -1,7 +1,10 @@
 import axios from 'axios'
+import qs from 'qs'
+import base from './base'
 
 const instance = axios.create(
     {
+        baseURL: '',
         //设置超时时间10s
         timeout: 1000 * 10
     }
@@ -17,7 +20,7 @@ instance.defaults.withCredentials = true
  */
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 instance.defaults.transformRequest = data=>{
-
+    qs.stringify(data)
 }
 
 /**
@@ -49,7 +52,7 @@ instance.interceptors.response.use(response => {
             case 403: //服务器理解请求，但是拒绝下一步执行 （token过期）
                 break
             case 404: //找不到页面
-                breaks
+                break
         }
     }else {
         //=> 服务器没有返回结果
@@ -59,6 +62,6 @@ instance.interceptors.response.use(response => {
         }
         return Promise.reject(error)
     }
-}
+})
 
 export default instance

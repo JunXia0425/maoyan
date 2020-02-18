@@ -13,8 +13,8 @@ module.exports = {
     },
     devServer: {
         proxy: {
-          '/history': {
-            target: 'https://webapi.115.com',
+          '/ajax': {
+            target: 'https://m.maoyan.com',
             changeOrigin: true
           }
         }

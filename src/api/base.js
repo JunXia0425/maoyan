@@ -1,5 +1,5 @@
 const base = {
-    production: 'http://www.baidu.com',
+    production: 'https://m.maoyan.com',
     test: 'http://127.0.0.1:8080'
 }
 

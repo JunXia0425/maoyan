@@ -26,14 +26,14 @@ export default {
         MovieList
     },
     beforeCreate () {
-        axios({
-            method: 'post',
-            // url: `ajax/comingList?ci=783&token=&limit=10&optimus_uuid=${document.cookie.split(';')[1].split('=')[1]}&optimus_risk_level=71&optimus_code=10`
-            url: `history/list?type=3&limit=1`
-        }).then((result) => {
-            console.log(result)
-            console.log(document.cookie.split(';')[1])
-        })
+        // axios({
+        //     method: 'post',
+        //     // url: `ajax/comingList?ci=783&token=&limit=10&optimus_uuid=${document.cookie.split(';')[1].split('=')[1]}&optimus_risk_level=71&optimus_code=10`
+        //     url: `history/list?type=3&limit=1`
+        // }).then((result) => {
+        //     console.log(result)
+        //     console.log(document.cookie.split(';')[1])
+        // })
     },
     methods: {
         

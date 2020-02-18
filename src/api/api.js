@@ -1,10 +1,11 @@
-import base from './base'
 import axios from './http'
 
 const video = {
     // 视频列表
-    videoList () {
-        return axios.get(`${base.production}/topics`);
+    videoList (data) {
+        return axios.get(`/ajax/comingList`,{
+            params:data
+        });
     },
     // 视频详情,演示
     videoDetail (id, params) {
